@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a727e5-43bf-4979-a4b4-2cbaa44d45ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/WNWabp1SBc/config.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/WNWabp1SBc/controller/extension/feed/openbaypro.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/WNWabp1SBc/controller/extension/fraud/fraudlabspro.php" afterDir="false" />
@@ -850,6 +852,7 @@
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/image/klarna_nld_banner.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/image/paypal_express_mobile.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/image/pilibaba_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/stylesheet/custom_style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/stylesheet/stylesheet.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/account/account.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/account/address_form.twig" afterDir="false" />
@@ -894,9 +897,12 @@
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/content_bottom.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/content_top.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/currency.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/footer.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/header.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/home.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/language.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/maintenance.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/menu.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/search.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/success.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/error/not_found.twig" afterDir="false" />
@@ -921,6 +927,7 @@
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/category.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/divido_calculator.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/ebay_listing.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/featured.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/filter.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/google_hangouts.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/html.twig" afterDir="false" />
@@ -2451,8 +2458,12 @@
       <change afterPath="$PROJECT_DIR$/system/storage/vendor/zoujingli/wechat-php-sdk/include.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/system/storage/vendor/zoujingli/wechat-php-sdk/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WNWabp1SBc/controller/catalog/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/controller/catalog/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WNWabp1SBc/language/ru-ru/catalog/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/language/ru-ru/catalog/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WNWabp1SBc/language/ru-ru/ru-ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/language/ru-ru/ru-ru.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WNWabp1SBc/model/catalog/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/model/catalog/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WNWabp1SBc/view/template/catalog/category_form.twig" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/view/template/catalog/category_form.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/controller/catalog/attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/controller/catalog/attribute.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/controller/catalog/attribute_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/WNWabp1SBc/controller/catalog/attribute_group.php" afterDir="false" />
@@ -3816,15 +3827,15 @@
       <change beforePath="$PROJECT_DIR$/catalog/language/ru-ru/ru-ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/ru-ru/ru-ru.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/language/ru-ru/tool/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/ru-ru/tool/upload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/model/extension/module/sms_alert.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/javascript/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/javascript/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/javascript/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/javascript/bootstrap/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/javascript/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/javascript/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/javascript/custom-js.js" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/javascript/custom-js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/stylesheet/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/custom_menu.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/search.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/search.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/myTheme/stylesheet/custom_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/stylesheet/custom_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/footer.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/header.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/menu.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/common/menu.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/featured.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/myTheme/template/extension/module/featured.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image/cache/catalog/demo/apple_cinema_30-40x40.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/image/cache/catalog/demo/canon_eos_5d_1-40x40.jpg" beforeDir="false" />
@@ -3883,16 +3894,10 @@
       <change beforePath="$PROJECT_DIR$/system/storage/cache/c7/c7d8ec57cedc8a88a50d6533e6ab12f0b1357a482a8516e40ac971b27a2363d3.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/cache/c8/c8c06849acd445307b4287978a0a022ed5dfe57167f55eba4c5262a124c913cd.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1581786037" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1584201693" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1584199825" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.information.2.1584199198" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.length_class.2.1584199198" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.order_status.2.1584199198" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.return_status.2.1584199198" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1584207581" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1584204627" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1581786137" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1584200630" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.weight_class.2.1584199198" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.zone.220.1584199275" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1584204625" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/cache/e9/e90ab70202d40e46e85300a44196c00f042a924ca01e0325d28165b3fc68782a.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/cache/f7/f70437a71d38f019d77c855f887b29a5ab63d3127e1013b762fa15309a193bc1.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/cache/fd/fdc1268061d04b600c1a23fb1ac5bdf4256d70e0fdd805a3f5b327ce52280bee.php" beforeDir="false" />
@@ -3928,10 +3933,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Z71rM0i6LcMk1bFGh8PQOADldO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../header-shop.loc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\betaviz.opencart\WNWabp1SBc\controller\catalog" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -3955,7 +3970,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584175515811</updated>
-      <workItem from="1584175516979" duration="8876000" />
+      <workItem from="1584175516979" duration="10389000" />
+      <workItem from="1584216442022" duration="264000" />
+      <workItem from="1584266777896" duration="1056000" />
+      <workItem from="1584428071555" duration="5210000" />
+      <workItem from="1584792001680" duration="12066000" />
+      <workItem from="1584873647699" duration="7000000" />
+      <workItem from="1584975738640" duration="2055000" />
+      <workItem from="1585046564518" duration="4840000" />
+      <workItem from="1585135154350" duration="1692000" />
+      <workItem from="1585247492394" duration="1415000" />
+      <workItem from="1585295371540" duration="21214000" />
+      <workItem from="1585633037705" duration="16794000" />
+      <workItem from="1585826214817" duration="5723000" />
+      <workItem from="1585888292151" duration="3505000" />
+      <workItem from="1585996371461" duration="9107000" />
+      <workItem from="1586076021987" duration="12761000" />
+      <workItem from="1586232144367" duration="11000" />
+      <workItem from="1586971029452" duration="2863000" />
+      <workItem from="1587800575210" duration="1162000" />
+      <workItem from="1587896242385" duration="2643000" />
     </task>
     <servers />
   </component>
@@ -3967,7 +4001,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

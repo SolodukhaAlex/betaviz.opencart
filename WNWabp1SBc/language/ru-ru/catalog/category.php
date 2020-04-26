@@ -15,21 +15,24 @@ $_['column_sort_order']      = 'Порядок сортировки';
 $_['column_action']          = 'Действие';
 
 // Entry
-$_['entry_name']             = 'Категория';
-$_['entry_description']      = 'Описание';
-$_['entry_meta_title'] 	     = 'Мета-тег Title';
-$_['entry_meta_keyword']     = 'Мета-тег Keywords';
-$_['entry_meta_description'] = 'Мета-тег Description';
-$_['entry_keyword']          = 'SEO URL';
-$_['entry_parent']           = 'Родительская категория';
-$_['entry_filter']           = 'Фильтры';
-$_['entry_store']            = 'Магазины';
-$_['entry_image']            = 'Изображение категории';
-$_['entry_top']              = 'Главное меню';
-$_['entry_column']           = 'Столбцы';
-$_['entry_sort_order']       = 'Порядок сортировки';
-$_['entry_status']           = 'Статус';
-$_['entry_layout']           = 'Макет';
+$_['entry_name']                = 'Категория';
+$_['entry_description']         = 'Описание';
+$_['entry_meta_title'] 	        = 'Мета-тег Title';
+$_['entry_meta_keyword']        = 'Мета-тег Keywords';
+$_['entry_meta_description']    = 'Мета-тег Description';
+$_['entry_keyword']             = 'SEO URL';
+$_['entry_parent']              = 'Родительская категория';
+$_['entry_filter']              = 'Фильтры';
+$_['entry_store']               = 'Магазины';
+$_['entry_image']               = 'Изображение категории';
+$_['entry_popular_image']       = 'Изображение популярного товара в родительской категории';
+$_['entry_popular_name']        = 'Название популярного товара';
+$_['entry_popular_description'] = 'Описание популярного товара';
+$_['entry_top']                 = 'Главное меню';
+$_['entry_column']              = 'Столбцы';
+$_['entry_sort_order']          = 'Порядок сортировки';
+$_['entry_status']              = 'Статус';
+$_['entry_layout']              = 'Макет';
 
 // Help
 $_['help_filter']            = '(Автозаполнение)';

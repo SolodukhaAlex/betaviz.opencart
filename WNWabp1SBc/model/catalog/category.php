@@ -10,9 +10,12 @@ class ModelCatalogCategory extends Model {
 		}
 
 		foreach ($data['category_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "' , menu_subcategory_description = '" . $this->db->escape($value['menu_subcategory_description']) . "' , description = '" . $this->db->escape($value['description']) . "', 	name_popular = '" . $this->db->escape($value['name_popular']) . "' , description_popular = '" . $this->db->escape($value['description_popular']) . "' , meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
+        if (isset($data['image_popular'])) {
+            $this->db->query("UPDATE " . DB_PREFIX . "category_description SET image_popular = '" . $this->db->escape($data['image_popular']) . "' WHERE category_id = '" . (int)$category_id . "'");
+        }
 		// MySQL Hierarchical Data Closure Table Pattern
 		$level = 0;
 
@@ -69,8 +72,11 @@ class ModelCatalogCategory extends Model {
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_description WHERE category_id = '" . (int)$category_id . "'");
 
+        if (isset($data['image_popular'])) {
+            $this->db->query("UPDATE " . DB_PREFIX . "category_description SET image_popular = '" . $this->db->escape($data['image_popular']) . "' WHERE category_id = '" . (int)$category_id . "'");
+        }
 		foreach ($data['category_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', menu_subcategory_description = '" . $this->db->escape($value['menu_subcategory_description']) . "' , description = '" . $this->db->escape($value['description']) . "', image_popular = '" . $this->db->escape($data['image_popular']) . "', name_popular = '" . $this->db->escape($value['name_popular']) . "', description_popular = '" . $this->db->escape($value['description_popular']) . "' , meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
 		// MySQL Hierarchical Data Closure Table Pattern
@@ -210,8 +216,8 @@ class ModelCatalogCategory extends Model {
 	}
 
 	public function getCategory($category_id) {
-		$query = $this->db->query("SELECT DISTINCT *, (SELECT GROUP_CONCAT(cd1.name ORDER BY level SEPARATOR '&nbsp;&nbsp;&gt;&nbsp;&nbsp;') FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "category_description cd1 ON (cp.path_id = cd1.category_id AND cp.category_id != cp.path_id) WHERE cp.category_id = c.category_id AND cd1.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY cp.category_id) AS path FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd2 ON (c.category_id = cd2.category_id) WHERE c.category_id = '" . (int)$category_id . "' AND cd2.language_id = '" . (int)$this->config->get('config_language_id') . "'");
-		
+		$query = $this->db->query("SELECT DISTINCT *, (SELECT GROUP_CONCAT(cd1.name ORDER BY level SEPARATOR '&nbsp;&nbsp;&gt;&nbsp;&nbsp;') FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "category_description cd1 ON (cp.path_id = cd1.category_id AND cp.category_id != cp.path_id) WHERE cp.category_id = c.category_id AND cd1.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY cp.category_id) AS path FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd2 ON (c.category_id = cd2.category_id)  WHERE c.category_id = '" . (int)$category_id . "' AND cd2.language_id = '" . (int)$this->config->get('config_language_id') . "'");
+
 		return $query->row;
 	}
 
@@ -265,16 +271,22 @@ class ModelCatalogCategory extends Model {
 
 		foreach ($query->rows as $result) {
 			$category_description_data[$result['language_id']] = array(
-				'name'             => $result['name'],
-				'meta_title'       => $result['meta_title'],
-				'meta_description' => $result['meta_description'],
-				'meta_keyword'     => $result['meta_keyword'],
-				'description'      => $result['description']
+				'name'                         => $result['name'],
+				'menu_subcategory_description' => $result['menu_subcategory_description'], //my custom table field
+				'meta_title'                   => $result['meta_title'],
+				'meta_description'             => $result['meta_description'],
+				'meta_keyword'                 => $result['meta_keyword'],
+				'description'                  => $result['description'],
+                'image_popular'                => $result['image_popular'],
+                'name_popular'                 => $result['name_popular'],
+                'description_popular'          => $result['description_popular']
 			);
 		}
 
 		return $category_description_data;
 	}
+
+
 	
 	public function getCategoryPath($category_id) {
 		$query = $this->db->query("SELECT category_id, path_id, level FROM " . DB_PREFIX . "category_path WHERE category_id = '" . (int)$category_id . "'");

@@ -5,6 +5,7 @@ class ControllerCommonMenu extends Controller {
 
 		// Menu
 		$this->load->model('catalog/category');
+        $this->load->model('tool/image');
 
 		$this->load->model('catalog/product');
 
@@ -26,8 +27,10 @@ class ControllerCommonMenu extends Controller {
 					);
 
 					$children_data[] = array(
-						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+						'name'                          => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'href'                          => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id']),
+                        'menu_subcategory_description'  => $child['menu_subcategory_description']
+
 					);
 				}
 
@@ -36,7 +39,10 @@ class ControllerCommonMenu extends Controller {
 					'name'     => $category['name'],
 					'children' => $children_data,
 					'column'   => $category['column'] ? $category['column'] : 1,
-					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+					'href'     => $this->url->link('product/category', 'path=' . $category['category_id']),
+                    'image_popular' => $this->model_tool_image->resize($category['image_popular'], 148,82),
+                    'name_popular' => $category['name_popular'],
+                    'description_popular' => $category['description_popular']
 				);
 			}
 		}

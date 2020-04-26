@@ -139,6 +139,7 @@ $_['tab_recurring']                 = 'Периодичность';
 $_['tab_action']                    = 'Действие';
 $_['tab_google']                    = 'Google';
 $_['tab_seo']                       = 'SEO';
+$_['tab_popular']                   = 'Популярные товары';
 
 // Error
 $_['error_exception']               = 'Ошибка кода (%s): %s в %s на строке %s';

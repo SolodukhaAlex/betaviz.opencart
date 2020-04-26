@@ -437,6 +437,15 @@ class ControllerCatalogCategory extends Controller {
 			$data['image'] = '';
 		}
 
+        if (isset($this->request->post['image_popular'])) {
+            $data['image_popular'] = $this->request->post['image_popular'];
+        } elseif (!empty($category_info)) {
+            $data['image_popular'] = $category_info['image_popular'];
+        } else {
+            $data['image_popular'] = '';
+        }
+
+
 		$this->load->model('tool/image');
 
 		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
@@ -446,6 +455,14 @@ class ControllerCatalogCategory extends Controller {
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
+
+        if (isset($this->request->post['image_popular']) && is_file(DIR_IMAGE . $this->request->post['image_popular'])) {
+            $data['thumb_popular'] = $this->model_tool_image->resize($this->request->post['image_popular'], 100, 100);
+        } elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['image_popular'])) {
+            $data['thumb_popular'] = $this->model_tool_image->resize($category_info['image_popular'], 100, 100);
+        } else {
+            $data['thumb_popular'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+        }
 
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 
@@ -512,6 +529,8 @@ class ControllerCatalogCategory extends Controller {
 		if (!$this->user->hasPermission('modify', 'catalog/category')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
+
+
 
 		foreach ($this->request->post['category_description'] as $language_id => $value) {
 			if ((utf8_strlen($value['name']) < 1) || (utf8_strlen($value['name']) > 255)) {

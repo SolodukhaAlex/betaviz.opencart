@@ -17,6 +17,7 @@ $(document).ready(function () {
         $(".burger, .mobile-menu").toggleClass('mobileMenuActive');
         //can't scroll page when mobile menu active
         $('body').toggleClass('lock');
+        $(".main-mobile-menu").toggleClass('main-mobile-menu-active');
     });
     $(".main-mobile-category i").click(function () {
         //$(this).next() = mobile-dropdown. display subcategory in mobile menu
@@ -44,6 +45,6 @@ $(document).ready(function () {
 $(window).on('load scroll resize', function () {
     //dynamic margin from fixed burger menu
     const heightBurger = $('.burger-menu').prop('scrollHeight') + 10 + "px";
-    const nextAfterHeader = $(".main-mobile-menu").next();
+    const nextAfterHeader = $("#top");
     nextAfterHeader.css("margin-top", String(heightBurger));
 });
